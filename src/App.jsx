@@ -539,26 +539,30 @@ export default function QuizNaturista() {
               ))}
             </div>
 
-            <div className="bg-stone-900 text-white rounded-2xl p-6 text-center">
-              <h4 className="font-bold text-lg mb-2">Protocolo listo</h4>
-              <p className="text-stone-300 text-sm mb-4">
-                Enviaremos el <strong>{resultProfile.protocolName}</strong> a <u>{email}</u>.
-              </p>
+            <div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
+  <div className="text-xs uppercase tracking-widest text-stone-400 mb-2">
+    Siguiente paso recomendado
+  </div>
 
-              <button className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors mb-3">
-                Ver productos recomendados
-              </button>
+  <h4 className="font-bold text-xl mb-2">Empieza con tu plan de 7 días</h4>
 
-              <p className="text-xs text-stone-500">Código: BIENESTAR15</p>
+  <p className="text-stone-300 text-sm mb-5">
+    Te dejo una guía simple para empezar hoy mismo.
+  </p>
 
-              <button
-                onClick={reset}
-                className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors"
-              >
-                Reiniciar
-              </button>
-            </div>
-          </div>
+  <button className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors mb-3">
+    Descargar protocolo (PDF)
+  </button>
+
+  <button className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors">
+    Hablar por WhatsApp
+  </button>
+
+  <p className="mt-4 text-[11px] text-stone-500 leading-relaxed">
+    Nota: Esto es orientación general de bienestar y no reemplaza atención médica.
+  </p>
+</div>
+
 
           <div className="text-center text-stone-400 text-sm px-8">
             <p className="italic">“La curación es un proceso de escuchar al cuerpo, no de silenciarlo.”</p>
