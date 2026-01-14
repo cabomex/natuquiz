@@ -508,27 +508,47 @@ export default function QuizNaturista() {
             <h3 className={`text-xl font-bold mb-4 ${resultProfile.textColor}`}>Situación actual</h3>
             <p className="text-stone-600 leading-relaxed mb-6">{resultProfile.description}</p>
 
-            <div className="bg-stone-50 rounded-xl p-5 border border-stone-100">
-              <h4 className="font-semibold text-stone-800 mb-3 flex items-center gap-2">
-                <Activity className="w-4 h-4 text-emerald-500" />
-                Desafíos principales
-              </h4>
-              <ul className="space-y-2">
-                {resultProfile.challenges.map((challenge, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-stone-600">
-                    <span className="text-emerald-500 mt-1">•</span>
-                    {challenge}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+            {/* Summary Card */}
+<div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
+  <h3 className={`text-xl font-bold mb-4 ${resultProfile.textColor}`}>Resumen</h3>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 mb-8 border-t-4 border-emerald-500">
-            <div className="flex items-center gap-3 mb-6">
-              <Droplets className="w-6 h-6 text-emerald-600" />
-              <h3 className="text-xl font-bold text-stone-800">Plan natural base</h3>
-            </div>
+  <p className="text-stone-600 leading-relaxed">
+    {resultProfile.description}
+  </p>
+
+  <div className="mt-6 bg-stone-50 rounded-xl p-5 border border-stone-100">
+    <h4 className="font-semibold text-stone-800 mb-2">Qué pasa ahora</h4>
+    <p className="text-sm text-stone-600 leading-relaxed">
+      En lugar de darte una lista de cosas o suplementos, lo mejor es una conversación corta para
+      ubicar tu contexto y darte un siguiente paso claro (sin adivinar).
+    </p>
+  </div>
+</div>
+
+{/* Conversion Card */}
+<div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
+  <div className="text-xs uppercase tracking-widest text-stone-400 mb-2">
+    Siguiente paso recomendado
+  </div>
+
+  <h4 className="font-bold text-xl mb-2">Habla con un experto por WhatsApp</h4>
+
+  <p className="text-stone-300 text-sm mb-5">
+    Ya tenemos tu perfil. En la llamada/mensaje te damos 1 plan simple y el siguiente paso más útil.
+  </p>
+
+  <button
+    onClick={() => window.open(getWhatsAppLink({ profileTitle: resultProfile.title, email }), "_blank")}
+    className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors mb-3"
+  >
+    Abrir WhatsApp
+  </button>
+
+  <p className="mt-4 text-[11px] text-stone-500 leading-relaxed">
+    Nota: Esto es orientación general de bienestar y no reemplaza atención médica.
+  </p>
+</div>
+
 
             <div className="space-y-4 mb-8">
               {resultProfile.recommendations.map((rec, idx) => (
