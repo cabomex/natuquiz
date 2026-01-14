@@ -297,6 +297,7 @@ function getWhatsAppLink({ profileTitle, email }) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
 }
 
+
 export default function QuizNaturista() {
   const [step, setStep] = useState("welcome"); // welcome | quiz | email | analyzing | result
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
