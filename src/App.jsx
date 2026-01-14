@@ -432,16 +432,55 @@ export default function QuizNaturista() {
     </div>
   );
 
-  const renderEmailGate = () => (
-    <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center p-6">
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 border border-emerald-100 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-teal-500" />
+  ```jsx
+const renderEmailGate = () => (
+  <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center p-6">
+    <div className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 border border-emerald-100 text-center relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-teal-500" />
 
-        <div className="mb-6 flex justify-center">
-          <div className="bg-emerald-100 p-4 rounded-full animate-bounce-slow">
-            <Sparkles className="w-8 h-8 text-emerald-600" />
+      <div className="mb-6 flex justify-center">
+        <div className="bg-emerald-100 p-4 rounded-full animate-bounce-slow">
+          <Sparkles className="w-8 h-8 text-emerald-600" />
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-bold text-stone-800 mb-2">Listo</h2>
+      <p className="text-stone-600 mb-8">Déjanos tu WhatsApp para ver tu resultado.</p>
+
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (whatsapp) calculateResult();
+        }}
+      >
+        <div className="text-left mb-6">
+          <label className="block text-sm font-medium text-stone-700 mb-2">WhatsApp</label>
+          <div className="relative">
+            <input
+              type="tel"
+              required
+              value={whatsapp}
+              onChange={(e) => setWhatsapp(e.target.value)}
+              placeholder="10 dígitos"
+              className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+            />
           </div>
         </div>
+
+        <button
+          type="submit"
+          className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1"
+        >
+          Ver mi resultado
+        </button>
+      </form>
+
+      <p className="mt-4 text-xs text-stone-400">No compartimos tu información.</p>
+    </div>
+  </div>
+);
+```
+
 
         <h2 className="text-2xl font-bold text-stone-800 mb-2">Listo</h2>
         <p className="text-stone-600 mb-8">
