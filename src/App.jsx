@@ -354,8 +354,8 @@ export default function QuizNaturista() {
         <h1 className="text-3xl font-bold text-stone-800 mb-4 font-serif">Descubre lo que tu cuerpo intenta decirte</h1>
 
         <p className="text-stone-600 mb-8 leading-relaxed">
-          En 60 segundos, analizamos tus respuestas y ubicamos el patrón más probable.
-          Estás a un paso de recuperar tu equilibrio de forma natural.
+          En 60 segundos, analizamos tus respuestas y ubicamos el patrón más probable. Es Hora de
+          Recuperar tu Equilibrio
         </p>
 
         <div className="space-y-3 mb-8 text-left bg-stone-50 p-4 rounded-xl">
