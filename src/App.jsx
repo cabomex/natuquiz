@@ -548,9 +548,9 @@ export default function QuizNaturista() {
   >
     Enviar por WhatsApp
   </button>
-</div>
+            </div>
           </div>
-        </div>
+
 
 
           {/* Footer */}
