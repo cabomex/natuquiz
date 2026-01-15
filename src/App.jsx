@@ -339,11 +339,22 @@ export default function QuizNaturista() {
     }
   };
 
-  const calculateResult = () => {
-    const key = pickProfile(scores);
-    setResultProfileKey(key);
-    setStep("analyzing");
-  };
+ const calculateResult = () => {
+  const key = pickProfile(scores);
+  setResultProfileKey(key);
+
+  sendToSheets({
+    quiz: "NatuQuiz",
+    ts: new Date().toISOString(),
+    whatsapp,
+    profileKey: key,
+    profileTitle: PROFILES[key]?.title || "",
+    scores,
+  });
+
+  setStep("analyzing");
+};
+
 
   const reset = () => {
     setStep("welcome");
