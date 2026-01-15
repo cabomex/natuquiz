@@ -555,13 +555,16 @@ export default function QuizNaturista() {
   }}
 >
   Enviar por WhatsApp
+<button
+  onClick={() => {
+    window.location.href =
+      "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
+  }}
+  className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors"
+>
+  Enviar por WhatsApp
 </button>
 
-                onClick={reset}
-                className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors"
-              >
-                Reiniciar
-              </button>
 
               <p className="mt-4 text-[11px] text-stone-500 leading-relaxed">
                 Orientación general de bienestar. No sustituye atención médica.
