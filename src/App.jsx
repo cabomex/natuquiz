@@ -538,40 +538,46 @@ const renderEmailGate = () => (
   );
 
   const renderResults = () => {
-    if (!resultProfile) return null;
+  if (!resultProfile) return null;
 
-    return (
-      <div className="min-h-screen bg-stone-50">
-        <div className={`w-full bg-gradient-to-br ${resultProfile.color} text-white pt-12 pb-24 px-6 rounded-b-[40px] shadow-lg relative`}>
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-block p-4 bg-white/20 backdrop-blur-sm rounded-full mb-6 shadow-inner">{resultProfile.icon}</div>
-            <div className="uppercase tracking-widest text-xs font-semibold opacity-90 mb-2">Tu perfil</div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">{resultProfile.title}</h1>
-            <h2 className="text-lg md:text-xl opacity-90 font-light">{resultProfile.subtitle}</h2>
+  return (
+    <div className="min-h-screen bg-stone-50">
+      {/* Header simple, sin perfil */}
+      <div className="w-full bg-gradient-to-br from-emerald-600 to-teal-600 text-white pt-12 pb-16 px-6 rounded-b-[40px] shadow-lg">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="uppercase tracking-widest text-xs font-semibold opacity-90 mb-2">
+            Resultado
           </div>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Tu resultado está listo.</h1>
+          <p className="text-white/90 font-light">
+            Para recibir el siguiente paso, envía tu WhatsApp.
+          </p>
         </div>
+      </div>
 
-        <div className="max-w-2xl mx-auto px-6 -mt-16 pb-20">
-          <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
-            <h3 className={`text-xl font-bold mb-4 ${resultProfile.textColor}`}>Situación actual</h3>
-            <p className="text-stone-600 leading-relaxed mb-6">{resultProfile.description}</p>
+      {/* Card final */}
+      <div className="max-w-2xl mx-auto px-6 -mt-10 pb-20">
+        <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
+          <h3 className="text-lg font-bold text-stone-800 mb-2">Siguiente paso</h3>
+          <p className="text-stone-600">
+            Abre WhatsApp y envía tu mensaje. Ahí continúa la conversación.
+          </p>
 
-            {/* Summary Card */}
-<div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
-  <h3 className={`text-xl font-bold mb-4 ${resultProfile.textColor}`}>Resumen</h3>
+          <button
+            className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all"
+            onClick={() => window.open(getWhatsAppLink({ profileTitle: resultProfile.title, email: whatsapp }), "_blank")}
+          >
+            Enviar mi resultado por WhatsApp
+          </button>
 
-  <p className="text-stone-600 leading-relaxed">
-    {resultProfile.description}
-  </p>
-
-  <div className="mt-6 bg-stone-50 rounded-xl p-5 border border-stone-100">
-    <h4 className="font-semibold text-stone-800 mb-2">Qué pasa ahora</h4>
-    <p className="text-sm text-stone-600 leading-relaxed">
-      En lugar de darte una lista de cosas o suplementos, lo mejor es una conversación corta para
-      ubicar tu contexto y darte un siguiente paso claro (sin adivinar).
-    </p>
-  </div>
-</div>
+          <p className="mt-4 text-xs text-stone-400">
+            Orientación general de bienestar. No sustituye atención médica.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 {/* Conversion Card */}
 <div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
