@@ -490,11 +490,7 @@ export default function QuizNaturista() {
     </div>
   );
 
-  // ...todo tu código arriba igual...
-
-export default function QuizNaturista() {
-  // ...todo tu código arriba igual...
-
+  
   const renderResults = () => {
     if (!resultProfile) return null;
 
