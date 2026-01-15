@@ -632,10 +632,12 @@ const renderEmailGate = () => (
     Hablar por WhatsApp
   </button>
 
-  <p className="mt-4 text-[11px] text-stone-500 leading-relaxed">
-    Nota: Esto es orientación general de bienestar y no reemplaza atención médica.
-  </p>
-</div>
+  <p className="text-xs text-stone-300 mb-4 leading-relaxed">
+  <strong>ADVERTENCIA:</strong> No todo suplemento es igual. No inicies lo sugerido en este resultado preliminar.
+  <br />
+  {NOMBRE} te contactará para decirte qué elegir, cómo usarlo y qué hacer primero.
+</p>
+
 
 
           <div className="text-center text-stone-400 text-sm px-8">
