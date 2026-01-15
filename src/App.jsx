@@ -490,18 +490,27 @@ export default function QuizNaturista() {
     </div>
   );
 
+  // ...todo tu código arriba igual...
+
+export default function QuizNaturista() {
+  // ...todo tu código arriba igual...
+
   const renderResults = () => {
     if (!resultProfile) return null;
 
     return (
       <div className="min-h-screen bg-stone-50">
         {/* Hero */}
-        <div className={`w-full bg-gradient-to-br ${resultProfile.color} text-white pt-12 pb-24 px-6 rounded-b-[40px] shadow-lg`}>
+        <div
+          className={`w-full bg-gradient-to-br ${resultProfile.color} text-white pt-12 pb-24 px-6 rounded-b-[40px] shadow-lg`}
+        >
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-block p-4 bg-white/20 backdrop-blur-sm rounded-full mb-6 shadow-inner">
               {resultProfile.icon}
             </div>
-            <div className="uppercase tracking-widest text-xs font-semibold opacity-90 mb-2">Tu perfil</div>
+            <div className="uppercase tracking-widest text-xs font-semibold opacity-90 mb-2">
+              Tu perfil
+            </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{resultProfile.title}</h1>
             <h2 className="text-lg md:text-xl opacity-90 font-light">{resultProfile.subtitle}</h2>
           </div>
@@ -532,26 +541,25 @@ export default function QuizNaturista() {
             </div>
 
             {/* Warning + WhatsApp */}
-<div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
-  <p className="text-xs text-stone-300 mb-4 leading-relaxed">
-    <strong>ADVERTENCIA:</strong> No todo suplemento es igual. No inicies lo sugerido en este resultado preliminar.
-    <br />
-    Te explicamos qué elegir, cómo usarlo y qué hacer primero.
-  </p>
+            <div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
+              <p className="text-xs text-stone-300 mb-4 leading-relaxed">
+                <strong>ADVERTENCIA:</strong> No todo suplemento es igual. No inicies lo sugerido en este resultado
+                preliminar.
+                <br />
+                Te explicamos qué elegir, cómo usarlo y qué hacer primero.
+              </p>
 
-  <button
-    onClick={() => {
-      window.location.href =
-        "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
-    }}
-    className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors"
-  >
-    Enviar por WhatsApp
-  </button>
+              <button
+                onClick={() => {
+                  window.location.href =
+                    "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
+                }}
+                className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors"
+              >
+                Enviar por WhatsApp
+              </button>
             </div>
           </div>
-
-
 
           {/* Footer */}
           <div className="text-center text-stone-400 text-sm px-8">
@@ -596,7 +604,3 @@ export default function QuizNaturista() {
     </div>
   );
 }
-        }
-
-export default App;
-
