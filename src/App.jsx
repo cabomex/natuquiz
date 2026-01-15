@@ -594,3 +594,7 @@ export default function QuizNaturista() {
     </div>
   );
 }
+        }
+
+export default App;
+
