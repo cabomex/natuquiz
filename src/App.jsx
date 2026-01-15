@@ -487,17 +487,7 @@ const renderEmailGate = () => (
 ```
 
 
-        <h2 className="text-2xl font-bold text-stone-800 mb-2">Listo</h2>
-        <p className="text-stone-600 mb-8">
-          Para ver tu perfil y enviarte el protocolo base, deja tu correo.
-        </p>
-
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            if (!email) return;
-            calculateResult();
-          }}
+        
         >
           <div className="text-left mb-6">
             <label className="block text-sm font-medium text-stone-700 mb-2">Correo</label>
