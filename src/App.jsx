@@ -129,7 +129,7 @@ const QUESTIONS = [
 
 const PROFILES = {
   adrenal: {
-    title: "La Guerrera Agotada",
+    title: "La Guerrera(o) Agotada",
     subtitle: "Fatiga adrenal y desgaste",
     icon: <Activity className="w-12 h-12 text-white" />,
     color: "from-amber-500 to-orange-600",
@@ -217,7 +217,7 @@ const PROFILES = {
     protocolName: "Protocolo de reset hormonal",
   },
   preventive: {
-    title: "La Optimizadora Proactiva",
+    title: "La Salud Proactiva",
     subtitle: "Bienestar preventivo",
     icon: <Sparkles className="w-12 h-12 text-white" />,
     color: "from-blue-400 to-cyan-600",
