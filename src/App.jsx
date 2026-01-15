@@ -548,10 +548,15 @@ export default function QuizNaturista() {
                 }
                 className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors"
               >
-                Enviar por WhatsApp
-              </button>
+                <button
+  onClick={() => {
+    window.location.href =
+      "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
+  }}
+>
+  Enviar por WhatsApp
+</button>
 
-              <button
                 onClick={reset}
                 className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors"
               >
