@@ -293,7 +293,18 @@ function getWhatsAppLink({ profileTitle, whatsapp }) {
     `Hola. Ya hice el quiz. Resultado: "${profileTitle}". Mi WhatsApp es: ${whatsapp}.`
   );
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+} const WEBAPP_URL =
+  "https://script.google.com/macros/s/AKfycbz1bYW9kH6yDH3XrJJ3o_I7L6c0A0zLt_1QkJ-uL_gU9rtFcXnjo6Yet0xkIpVBCaAM/exec";
+
+function sendToSheets(payload) {
+  fetch(WEBAPP_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(payload),
+  });
 }
+
 
 // -------------------- COMPONENT --------------------
 
