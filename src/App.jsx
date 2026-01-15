@@ -532,45 +532,24 @@ export default function QuizNaturista() {
             </div>
 
             {/* Warning + WhatsApp */}
-            <div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
-              <p className="text-xs text-stone-300 mb-4 leading-relaxed">
-                <strong>ADVERTENCIA:</strong> No todo suplemento es igual. No inicies lo sugerido en este resultado preliminar.
-                <br />
-                Te explicamos qué elegir, cómo usarlo y qué hacer primero.
-              </p>
+<div className="bg-stone-900 text-white rounded-2xl p-6 text-center shadow-xl">
+  <p className="text-xs text-stone-300 mb-4 leading-relaxed">
+    <strong>ADVERTENCIA:</strong> No todo suplemento es igual. No inicies lo sugerido en este resultado preliminar.
+    <br />
+    Te explicamos qué elegir, cómo usarlo y qué hacer primero.
+  </p>
 
-              <button
-                onClick={() =>
-                  window.open(
-                    getWhatsAppLink({ profileTitle: resultProfile.title, whatsapp }),
-                    "_blank"
-                  )
-                }
-                className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors"
-              >
-                <button
-  onClick={() => {
-    window.location.href =
-      "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
-  }}
->
-  Enviar por WhatsApp
-<button
-  onClick={() => {
-    window.location.href =
-      "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
-  }}
-  className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors"
->
-  Enviar por WhatsApp
-</button>
+  <button
+    onClick={() => {
+      window.location.href =
+        "https://wa.me/5219991234567?text=Hola%20vi%20mi%20resultado%20del%20NatuQuiz";
+    }}
+    className="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-lg transition-colors"
+  >
+    Enviar por WhatsApp
+  </button>
+</div>
 
-
-              <p className="mt-4 text-[11px] text-stone-500 leading-relaxed">
-                Orientación general de bienestar. No sustituye atención médica.
-              </p>
-            </div>
-          </div>
 
           {/* Footer */}
           <div className="text-center text-stone-400 text-sm px-8">
