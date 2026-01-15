@@ -290,12 +290,13 @@ function pickProfile(scores) {
 // -------------------- COMPONENT --------------------
 const WHATSAPP_NUMBER = "52TU_NUMERO_AQUI"; // ejemplo: 5216241234567
 
-function getWhatsAppLink({ profileTitle, email }) {
+function getWhatsAppLink({ profileTitle, whatsapp }) {
   const text = encodeURIComponent(
-    `Hola. Ya hice el quiz. Mi perfil es: "${profileTitle}". Mi correo es: ${email}.`
+    `Hola. Ya hice el quiz. Mi perfil es: "${profileTitle}". Mi WhatsApp es: ${whatsapp}.`
   );
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
 }
+
 
 
 export default function QuizNaturista() {
