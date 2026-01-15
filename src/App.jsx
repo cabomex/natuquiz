@@ -446,7 +446,9 @@ const renderEmailGate = () => (
       </div>
 
       <h2 className="text-2xl font-bold text-stone-800 mb-2">Listo</h2>
-      <p className="text-stone-600 mb-8">Déjanos tu WhatsApp para ver tu resultado.</p>
+      <p className="text-stone-600 mb-8">
+        Para continuar, deja tu WhatsApp.
+      </p>
 
       <form
         onSubmit={(e) => {
@@ -455,17 +457,18 @@ const renderEmailGate = () => (
         }}
       >
         <div className="text-left mb-6">
-          <label className="block text-sm font-medium text-stone-700 mb-2">WhatsApp</label>
-          <div className="relative">
-            <input
-              type="tel"
-              required
-              value={whatsapp}
-              onChange={(e) => setWhatsapp(e.target.value)}
-              placeholder="10 dígitos"
-              className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
-            />
-          </div>
+          <label className="block text-sm font-medium text-stone-700 mb-2">
+            WhatsApp
+          </label>
+
+          <input
+            type="tel"
+            required
+            value={whatsapp}
+            onChange={(e) => setWhatsapp(e.target.value)}
+            placeholder="10 dígitos"
+            className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+          />
         </div>
 
         <button
@@ -480,6 +483,7 @@ const renderEmailGate = () => (
     </div>
   </div>
 );
+
 ```
 
 
