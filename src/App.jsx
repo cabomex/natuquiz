@@ -341,19 +341,28 @@ export default function QuizNaturista() {
 
  const calculateResult = () => {
   const key = pickProfile(scores);
-  setResultProfileKey(key);
+  const title = PROFILES[key]?.title || "Resultado";
+  const subtitle = PROFILES[key]?.subtitle || "";
 
   sendToSheets({
     quiz: "NatuQuiz",
     ts: new Date().toISOString(),
     whatsapp,
     profileKey: key,
-    profileTitle: PROFILES[key]?.title || "",
+    profileTitle: title,
     scores,
   });
 
+  const text = encodeURIComponent(
+    `Hola. Ya hice el NatuQuiz.\nResultado: ${title} — ${subtitle}\nMi WhatsApp: ${whatsapp}`
+  );
+
+  window.open(`https://wa.me/523310031694?text=${text}`, "_blank");
+
+  setResultProfileKey(key);
   setStep("analyzing");
 };
+
 
 
   const reset = () => {
