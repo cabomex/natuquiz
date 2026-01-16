@@ -385,7 +385,7 @@ export default function QuizNaturista() {
         <h1 className="text-3xl font-bold text-stone-800 mb-4 font-serif">¿Por qué no terminas de sentirte bien? </h1>
 
         <p className="text-stone-600 mb-8 leading-relaxed">
-          Descubre en 60 segs, lo que tu cuerpo intenta decirte. Haz Clic 
+          Descubre en 60 segs, lo que tu cuerpo intenta decirte 
         </p>
 
         <div className="space-y-3 mb-8 text-left bg-stone-50 p-4 rounded-xl">
@@ -407,7 +407,7 @@ export default function QuizNaturista() {
           onClick={() => setStep("quiz")}
           className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
         >
-          Comenzar evaluación
+          Descúbrelo Haz Clic Aquí
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
