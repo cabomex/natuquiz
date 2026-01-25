@@ -385,7 +385,7 @@ export default function QuizNaturista() {
         <h1 className="text-3xl font-bold text-stone-800 mb-4 font-serif">¿Por qué no terminas de sentirte bien? </h1>
 
         <p className="text-stone-600 mb-8 leading-relaxed">
-          Descubre en 60 segs, lo que tu cuerpo intenta decirte. Haz tu 2026 tu Mejor Aňo
+          Descubre en 60 segs, lo que tu cuerpo intenta decirte. Haz de tu 2026 tu Mejor Aňo
         </p>
 
         <div className="space-y-3 mb-8 text-left bg-stone-50 p-4 rounded-xl">
